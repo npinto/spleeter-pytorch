@@ -8,7 +8,8 @@ from spleeter_pytorch.estimator import Estimator
 if __name__ == '__main__':
     sr = 44100
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    es = Estimator(2, './checkpoints/2stems/model').to(device)
+    #es = Estimator(2, './checkpoints/2stems/model').to(device)
+    es = Estimator(5, './checkpoints/5stems/model').to(device)
     es.eval()
 
     # load wav audio
